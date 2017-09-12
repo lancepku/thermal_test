@@ -1,0 +1,10 @@
+Readme file for directory src10 &11 for code flac
+modifications from standard src file from CIG/Luc Lavier/E. Tan
+1. Time step reset on restart (when tolerance reset in .inp file)
+2. Depth (zlock) for non-application of plastic strain weakening allowed in input (locked)
+3. Dissipation or sshrheat set for only plastic strain not total strain
+4. Output of velocity (array 'vel') for plotting is replaced by displacemnt (array 'disp') since start of run (or restart) in meters.
+For src11
+1. Added 2nd stage of plastic weakening.  Thus, read_params.f90 and fl_plastic.f90 were changed
+2. Then, file *.inp RHEOLOGY input has to have a pls3,fric3, coh3 and dilat3.
+3.  As with src6 HEALING OF THE PLASTIC STRAIN- now tau_heal is reference strain rate (note that above a strain of 1 the rate of healing is proportionate to accumulated plastic strain)
